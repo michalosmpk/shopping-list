@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+html, body {
+  margin: 0;
+  padding: 0;
+  box-shadow: 0; }
+
+header {
+  height: 100px;
+  background-color: #5faad0;
+  font-family: 'Dancing Script', cursive;
+  display: grid;
+  place-items: center;
+  font-size: 50px;
+  padding: 0 20px;
+  color: #082350;
+  position: relative; }
+  header .hamburger {
+    position: absolute;
+    right: 20px;
+    transform: scale(0.8); }
+
+@media (max-width: 768px) {
+  header {
+    font-size: 40px; } }
+
+@media (max-width: 480px) {
+  header {
+    font-size: 35px; } }

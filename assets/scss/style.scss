@@ -1,0 +1,41 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	box-shadow: 0;
+}
+
+$text-main: rgb(8, 35, 80);
+$breakpoint-medium: 768px;
+$breakpoint-small: 480px;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+header {
+	height: 100px;
+	background-color: rgb(95, 170, 208);
+	font-family: 'Dancing Script', cursive;
+	display: grid;
+	place-items: center;
+	font-size: 50px;
+	padding: 0 20px;
+	color: $text-main;
+	position: relative;
+	.hamburger {
+		position: absolute;
+		right: 20px;
+		transform: scale(0.8);
+	}
+}
+
+@media (max-width: $breakpoint-medium) {
+	header {
+		font-size: 40px;
+	}
+}
+
+@media (max-width: $breakpoint-small) {
+	header {
+		font-size: 35px;
+	}
+}

@@ -12,10 +12,20 @@
 	<link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/hamburger.css">
+	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
 <body>
 	<header class="header">
-
+		Shopping List
+		<button class="hamburger hamburger--spin" type="button">
+			<span class="hamburger-box">
+				<span class="hamburger-inner"></span>
+			</span>
+		</button>
 	</header>
+
+	<script src="assets/js/main.js"></script>
 </body>
 </html>
