@@ -105,12 +105,13 @@ content {
       border-radius: 20px;
       padding-left: 25px;
       display: flex;
-      justify-content: space-between;
-      font-size: 25px;
-      font-family: 'Roboto Mono', monospace; }
+      justify-content: space-between; }
       content .shopping-list__listing p {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 25px;
         max-width: calc(100% - 100px);
-        overflow: hidden; }
+        overflow: hidden;
+        word-break: break-all; }
       content .shopping-list__listing button {
         cursor: pointer;
         margin-left: 12px;

@@ -53,7 +53,7 @@
 				foreach( $result as $row) {
 					?>
 					<div class="shopping-list__listing">
-						<p>
+						<p class="shopping-list__paragraph">
 							<?php echo $row[1]; ?>
 						</p>
 						<button type="submit" name="delete-listing-button" value="<?php echo $row[0];?>">
