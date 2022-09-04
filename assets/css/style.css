@@ -111,7 +111,7 @@ content {
         font-size: 25px;
         max-width: calc(100% - 100px);
         overflow: hidden;
-        word-break: break-all; }
+        word-break: break-word; }
       content .shopping-list__listing button {
         cursor: pointer;
         margin-left: 12px;
