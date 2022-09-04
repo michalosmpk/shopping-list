@@ -132,6 +132,7 @@ content {
 				max-width: calc(100% - 100px);
 				overflow: hidden;
 				word-break: break-word;
+				text-transform: capitalize;
 			}
 			button {
 					cursor: pointer;

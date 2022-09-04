@@ -111,7 +111,8 @@ content {
         font-size: 25px;
         max-width: calc(100% - 100px);
         overflow: hidden;
-        word-break: break-word; }
+        word-break: break-word;
+        text-transform: capitalize; }
       content .shopping-list__listing button {
         cursor: pointer;
         margin-left: 12px;
