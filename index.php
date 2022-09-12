@@ -49,12 +49,16 @@
 		</form>
 		<form class="shopping-list" method="post">
 			<?php 
+				$count = 1;
 				$result = $conn->query('select * from list;')->fetch_all(); 
 				foreach( $result as $row) {
 					?>
 					<div class="shopping-list__listing">
 						<p class="shopping-list__paragraph">
-							<?php echo $row[1]; ?>
+							<?php
+								echo $count++.'.';
+								echo $row[1];
+							?>
 						</p>
 						<button type="submit" name="delete-listing-button" value="<?php echo $row[0];?>">
 							<span class="delete-listing-button__minus"></span>
