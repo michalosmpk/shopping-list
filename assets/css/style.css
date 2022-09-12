@@ -144,7 +144,7 @@ content {
             background: #aedcf3;
             transform: translate(-50%, -50%); }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   header {
     font-size: 35px; }
   content {
@@ -160,7 +160,8 @@ content {
           height: 25px;
           width: 3px; }
     content .shopping-list {
-      margin-top: 40px; }
+      margin-top: 40px;
+      gap: 23px; }
       content .shopping-list__listing {
         padding-left: 20px; }
         content .shopping-list__listing p {
