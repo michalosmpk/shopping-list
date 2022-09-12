@@ -177,30 +177,29 @@ content {
 
 @media (max-width: $breakpoint-medium) {
 	header {
-		font-size: 40px;
-	}
-}
-
-@media (max-width: $breakpoint-small) {
-	header {
 		font-size: 35px;
 	}
+
 	$plus-height: 3px;
 	$plus-width: 25px;
+
 	content {
 		padding-top: 40px;
+
 		.new-listing {
 			height: 56.5px;
-			input { 
 
-			}
+			input {}
+
 			button {
 				min-width: 70px;
+
 				.new-listing__plus {
 					&:before {
 						width: $plus-width;
 						height: $plus-height;
-					}			
+					}
+
 					&:after {
 						height: $plus-width;
 						width: $plus-height;
@@ -208,16 +207,21 @@ content {
 				}
 			}
 		}
+
 		.shopping-list {
 			margin-top: 40px;
+
 			&__listing {
 				padding-left: 20px;
+
 				p {
 					max-width: calc(100% - 70px);
 					font-size: 17px;
 				}
+
 				button {
 					min-width: 70px;
+
 					.delete-listing-button__minus {
 						&:before {
 							width: $plus-width;
@@ -228,4 +232,8 @@ content {
 			}
 		}
 	}
+}
+
+@media (max-width: $breakpoint-small) {
+	
 }

@@ -146,10 +146,6 @@ content {
 
 @media (max-width: 768px) {
   header {
-    font-size: 40px; } }
-
-@media (max-width: 480px) {
-  header {
     font-size: 35px; }
   content {
     padding-top: 40px; }
