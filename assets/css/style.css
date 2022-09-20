@@ -151,6 +151,8 @@ content {
     padding-top: 40px; }
     content .new-listing {
       height: 56.5px; }
+      content .new-listing input {
+        font-size: 17px; }
       content .new-listing button {
         min-width: 70px; }
         content .new-listing button .new-listing__plus:before {
