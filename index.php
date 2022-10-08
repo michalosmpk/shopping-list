@@ -2,17 +2,24 @@
 <html lang="en">
 <?php 
 	require_once('db.php');
-	if(isset($_POST['new-listing-button']) && !empty($_POST['new-listing-input'])) {
-		$conn->query('INSERT INTO list (listing_name) VALUES (\''.$_POST['new-listing-input'].'\')');
-		unset($_POST);
-		header('Location: index.php');
-	}
-	if(isset($_POST['delete-listing-button'])) {
-		echo $_POST['delete-listing-button'];
-		$conn->query('DELETE FROM list WHERE list.listing_id = '.$_POST['delete-listing-button']);
-		unset($_POST);
-		header('Location: index.php');
-	}
+	require_once('functions.php');
+	// if(isset($_POST['new-listing-button']) && !empty($_POST['new-listing-input'])) {
+	// 	$conn->query('INSERT INTO list (listing_name) VALUES (\''.$_POST['new-listing-input'].'\')');
+	// 	unset($_POST);
+	// 	header('Location: index.php');
+	// }
+	// if(isset($_POST['delete-listing-button'])) {
+	// 	echo $_POST['delete-listing-button'];
+	// 	$conn->query('DELETE FROM list WHERE list.listing_id = '.$_POST['delete-listing-button']);
+	// 	unset($_POST);
+	// 	header('Location: index.php');
+	// }
+	
+	// $result = $conn->query('select * from users;')->fetch_all();
+	// PRINTR($result);
+	// exit; 
+
+
 
 ?>
 <head>
@@ -32,6 +39,13 @@
 	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
 <body>
+	<div class="sidepanel">
+		<menu>
+			<nav>Zaloguj się</nav>
+			<nav>Lista 1</nav>
+			<nav>Lista 2</nav>
+		</menu>
+	</div>
 	<header class="header">
 		Shopping List
 		<button class="hamburger hamburger--spin" type="button">
@@ -49,23 +63,23 @@
 		</form>
 		<form class="shopping-list" method="post">
 			<?php 
-				$count = 1;
-				$result = $conn->query('select * from list;')->fetch_all(); 
-				foreach( $result as $row) {
+				// $count = 1;
+				// $result = $conn->query('select * from list;')->fetch_all(); 
+				// foreach( $result as $row) {
 					?>
 					<div class="shopping-list__listing">
 						<p class="shopping-list__paragraph">
 							<?php
-								echo $count++.'.';
-								echo $row[1];
+								// echo $count++.'.';
+								// echo $row[1];
 							?>
 						</p>
-						<button type="submit" name="delete-listing-button" value="<?php echo $row[0];?>">
+						<button type="submit" name="delete-listing-button" value="<?php // echo $row[0];?>">
 							<span class="delete-listing-button__minus"></span>
 						</button>
 					</div>
 					<?php
-				}
+				//}
 			?>
 		</form>
 	</content>

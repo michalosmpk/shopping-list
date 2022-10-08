@@ -11,6 +11,18 @@ $breakpoint-small: 480px;
 
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto+Mono&display=swap');
 
+.sidepanel {
+	position: fixed;
+	min-width: 400px;
+	height: 100vh;
+	background-color: rgba(50, 50, 50, 0.9);
+	z-index: 50;
+	color: white; 
+	nav {
+		font-size: 25px;
+		margin-top: 40px;
+	}
+}
 
 header {
 	height: 100px;
@@ -26,7 +38,8 @@ header {
 		position: absolute;
 		right: 20px;
 		transform: scale(0.8);
-		display: none;
+		// display: none;
+		z-index: 51;
 	}
 }
 

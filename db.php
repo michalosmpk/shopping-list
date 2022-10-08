@@ -1,8 +1,10 @@
 <?php
+	include_one('db_pass.php');
 	$servername = "localhost";
 	$username = "root";
 	$password = "";
-	$dbname = "shopping_list-basic";
+	$dbname = "shopping-list";
+	// $dbname = "shopping_list-basic";
 
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);

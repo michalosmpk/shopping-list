@@ -4,6 +4,17 @@ html, body {
   padding: 0;
   box-shadow: 0; }
 
+.sidepanel {
+  position: fixed;
+  min-width: 400px;
+  height: 100vh;
+  background-color: rgba(50, 50, 50, 0.9);
+  z-index: 50;
+  color: white; }
+  .sidepanel nav {
+    font-size: 25px;
+    margin-top: 40px; }
+
 header {
   height: 100px;
   background-color: #5faad0;
@@ -18,7 +29,7 @@ header {
     position: absolute;
     right: 20px;
     transform: scale(0.8);
-    display: none; }
+    z-index: 51; }
 
 content {
   background-color: #dac7e3;
