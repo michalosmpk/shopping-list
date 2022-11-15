@@ -1,0 +1,167 @@
+$login-inputs: rgb(233, 147, 217);
+.login-container {
+	display: grid;
+	place-items: center;
+	height: 100%;
+	min-height: calc(100vh - 100px);
+	padding-top: 100px;
+	.login-panel {
+		width: 350px;
+		height: 430px;
+		background-color: rgb(117, 193, 251);
+		margin-bottom: 100px;
+		border-radius: 100px;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		padding-top: 30px;
+		p {
+			font-size: 28px;
+		}
+		&__email, &__password {
+			border: 0;
+			font-size: 18px;
+			font-family: inherit;
+			background-color: $login-inputs;
+			width: 250px;
+			height: 50px;
+			border-radius: 10px;
+			margin-bottom: 40px;
+			padding: 5px 10px;
+			&::placeholder {
+				color: rgb(82, 74, 74);
+			}
+			&:focus {
+				outline: none;
+			}
+		}
+		&__password {
+			margin-bottom: 20px;
+		}
+
+		&__checkbox-holder {
+			margin-bottom: 40px;
+			width: 270px;
+			display: flex;
+			justify-content: start;
+			align-items: center;
+			input[type='checkbox'] {
+				margin-right: 10px;
+				width: 15px;
+				height: 15px;
+			}
+		}
+		&__login-button {
+			position: relative;
+			font-size: 25px;
+			background-color: $login-inputs;
+			padding: 10px 20px;
+			width: 200px;
+			height: 53px;
+			border-radius: 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			animation-duration: 500ms;
+			animation-timing-function: ease-in;
+			transform-origin: center;
+			animation-delay: 0ms;
+			animation-fill-mode: forwards;
+			&__animation-fail {
+				animation-name: login-button-fail;
+			}
+			&__animation-success {
+				animation-name: login-button-success;
+			}
+			&__success-icon {	
+				$icon-size: 40px;
+				width: $icon-size;	
+				height: $icon-size;	
+				position: absolute;
+				scale: 0;
+				animation-duration: 500ms;
+				animation-timing-function: ease-in-out;
+				animation-fill-mode: forwards;
+				animation-delay: 0ms;
+				&__tip, &__long {
+					display: block;
+					position: absolute;
+					height: 4px;
+					background-color: white;
+					border-radius: 10px;
+					position: relative;
+				}
+		
+				&__tip {
+					width: 60%;
+					top: 61%;
+					left: -6%;
+					transform: rotate(45deg);
+				}
+		
+				&__long {
+					width: 100%;
+					transform: rotate(-45deg);
+					top: 38%;
+					left: 25%;
+					
+				}
+				&__animation {
+					animation-name: login-button-success-icon;
+				}
+			}
+		}
+
+	}
+}
+
+@keyframes login-button-fail {
+	33% {
+		transform: translateX(5px);
+		rotate: -5deg;
+	}
+	66% {
+		transform: translateX(-5px);
+		rotate: 5deg;
+	}
+	100% {
+		transform: translateX(0px);
+		rotate: 0deg;
+	}
+}
+
+@keyframes login-button-success {
+	0% {
+		width: 200px;
+		height: 53px;
+		border-radius: 10px;
+		rotate: 0deg;
+	}
+
+	50% {
+		background-color: $login-inputs;;
+	}
+
+	75% {
+		font-size: 0;
+	}
+	100% {
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		rotate: 360deg;
+		font-size: 0;
+		background-color: lightgreen;
+	}
+}
+@keyframes login-button-success-icon {
+	50% {
+		scale: 0;
+		rotate: 0deg;
+	}
+	100% {
+		rotate: 360deg;
+		font-size: 0;
+		scale: 1;
+	}
+}

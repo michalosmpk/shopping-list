@@ -1,0 +1,130 @@
+.login-container {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  min-height: calc(100vh - 100px);
+  padding-top: 100px; }
+  .login-container .login-panel {
+    width: 350px;
+    height: 430px;
+    background-color: #75c1fb;
+    margin-bottom: 100px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 30px; }
+    .login-container .login-panel p {
+      font-size: 28px; }
+    .login-container .login-panel__email, .login-container .login-panel__password {
+      border: 0;
+      font-size: 18px;
+      font-family: inherit;
+      background-color: #e993d9;
+      width: 250px;
+      height: 50px;
+      border-radius: 10px;
+      margin-bottom: 40px;
+      padding: 5px 10px; }
+      .login-container .login-panel__email::placeholder, .login-container .login-panel__password::placeholder {
+        color: #524a4a; }
+      .login-container .login-panel__email:focus, .login-container .login-panel__password:focus {
+        outline: none; }
+    .login-container .login-panel__password {
+      margin-bottom: 20px; }
+    .login-container .login-panel__checkbox-holder {
+      margin-bottom: 40px;
+      width: 270px;
+      display: flex;
+      justify-content: start;
+      align-items: center; }
+      .login-container .login-panel__checkbox-holder input[type='checkbox'] {
+        margin-right: 10px;
+        width: 15px;
+        height: 15px; }
+    .login-container .login-panel__login-button {
+      position: relative;
+      font-size: 25px;
+      background-color: #e993d9;
+      padding: 10px 20px;
+      width: 200px;
+      height: 53px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation-duration: 500ms;
+      animation-timing-function: ease-in;
+      transform-origin: center;
+      animation-delay: 0ms;
+      animation-fill-mode: forwards; }
+      .login-container .login-panel__login-button__animation-fail {
+        animation-name: login-button-fail; }
+      .login-container .login-panel__login-button__animation-success {
+        animation-name: login-button-success; }
+      .login-container .login-panel__login-button__success-icon {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        scale: 0;
+        animation-duration: 500ms;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-delay: 0ms; }
+        .login-container .login-panel__login-button__success-icon__tip, .login-container .login-panel__login-button__success-icon__long {
+          display: block;
+          position: absolute;
+          height: 4px;
+          background-color: white;
+          border-radius: 10px;
+          position: relative; }
+        .login-container .login-panel__login-button__success-icon__tip {
+          width: 60%;
+          top: 61%;
+          left: -6%;
+          transform: rotate(45deg); }
+        .login-container .login-panel__login-button__success-icon__long {
+          width: 100%;
+          transform: rotate(-45deg);
+          top: 38%;
+          left: 25%; }
+        .login-container .login-panel__login-button__success-icon__animation {
+          animation-name: login-button-success-icon; }
+
+@keyframes login-button-fail {
+  33% {
+    transform: translateX(5px);
+    rotate: -5deg; }
+  66% {
+    transform: translateX(-5px);
+    rotate: 5deg; }
+  100% {
+    transform: translateX(0px);
+    rotate: 0deg; } }
+
+@keyframes login-button-success {
+  0% {
+    width: 200px;
+    height: 53px;
+    border-radius: 10px;
+    rotate: 0deg; }
+  50% {
+    background-color: #e993d9; }
+  75% {
+    font-size: 0; }
+  100% {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    rotate: 360deg;
+    font-size: 0;
+    background-color: lightgreen; } }
+
+@keyframes login-button-success-icon {
+  50% {
+    scale: 0;
+    rotate: 0deg; }
+  100% {
+    rotate: 360deg;
+    font-size: 0;
+    scale: 1; } }

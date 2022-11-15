@@ -1,6 +1,7 @@
 <?php
 	$servername = "localhost";
-	$username = "username";
-	$password = "password";
+	$username = "root";
+	$password = "";
 	$dbname = "shopping-list";
+	// $dbname = "shopping_list-basic";
 ?>
